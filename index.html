@@ -9,18 +9,52 @@
 </head>
 <body>
     <script>
-        let buttons = []
-        let audio = document.createElement('audio')
+        let imagens = []
+        let video = document.createElement('video')
+
+        let div = document.createElement('div')
+        let botaoPlay = document.createElement('img')
+        video.src = 'retrospectiva2020.mp4'
         let $body = document.querySelector('body')
 
-        for (let b = 1; b <= 2; b ++) {
-            let button = document.createElement('button')
-            buttons.push(button)
+        
+        
+        
+
+        
+
+        for (let i = 1; i <= 2; i ++) {
+            let imagem = document.createElement('img')
+            imagens.push(imagem)
         }
+        let play = imagens[0]
+        let pause = imagens[1]
+       
+        play.src = 'play.png'
+        
+        pause.src = 'pause.png'
+        pause.style.width = '1cm'
+        play.style.width = '3cm'
+        pause.style.marginBottom = '0.4cm'
+        div.style.backgroundColor = 'red'
+        video.controls
 
-        let play = buttons[0].textContent = 'Play'
+        
+        $body.appendChild(video)
+        div.appendChild(play)
+        div.appendChild(pause)
+        $body.appendChild(div)
+        
+        
+        play.addEventListener('click', () => {
+            video.play()
+            video.controls
+            
+        })
 
-        $body.appendChild(play)
+        pause.addEventListener('click', () => {
+            video.pause()
+        })
     </script>
 </body>
 </html>
