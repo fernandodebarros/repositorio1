@@ -5,8 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    
+    <script>
+        let buttons = []
+        let audio = document.createElement('audio')
+        let $body = document.querySelector('body')
+
+        for (let b = 1; b <= 2; b ++) {
+            let button = document.createElement('button')
+            buttons.push(button)
+        }
+
+        let play = buttons[0].textContent = 'Play'
+
+        $body.appendChild(play)
+    </script>
 </body>
 </html>
